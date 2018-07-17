@@ -1,3 +1,5 @@
+### Generating Random Lat/Long Points inside expected DMA coordinates to help verify watch live endpoints for DCG ###
+
 import random
 import sys
 import math
@@ -24,13 +26,3 @@ for point in points:
 
 # latitude = 19.99
 # longitude = 73.78
-
-# def generate_random_data(lat, lon, num_rows):
-#     for _ in xrange(num_rows):
-#         hex1 = '%012x' % random.randrange(16**12) # 12 char random string
-#         flt = float(random.randint(0,100))
-#         dec_lat = random.random()/100
-#         dec_lon = random.random()/100
-#         print '%s %.1f %.6f %.6f \n' % (hex1.lower(), flt, lon+dec_lon, lat+dec_lat)
-
-# generate_random_data(latitude, longitude, 5)
