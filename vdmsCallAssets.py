@@ -2,15 +2,15 @@ import urllib2, urllib, zlib, hmac, hashlib, time, json
 
 #documentation: https://docs.vdms.com/video/index.html#Develop/Channel.htm?Highlight=channel/assets
 
-KTTV = '974a8c4f2e8c431a89d127ac9c57a29d' #GUID
+KTTV = '' #GUID
 FS1 = '' #GUID
 RBO = {} #Array of GUIDS
 
 vdms_info={} #Expand on making call, regardless of the account
 
-ROOT_URL = '' #Enter Uplynk URL to make the call
-OWNER = '' # CHANGE THIS TO YOUR ACCOUNT GUID
-SECRET = '' # CHANGE THIS TO YOUR SECRET API KEY
+ROOT_URL = '' #Enter URL to make the call
+OWNER = '' # CHANGE YOUR ID
+SECRET = '' # CHANGE THIS TO YOUR SECRET
  
 def Call(uri, **msg):
     msg['_owner'] = OWNER
