@@ -21,4 +21,4 @@ def Call(uri, **msg):
     body = urllib.urlencode(dict(msg=msg, sig=sig))
     return json.loads(urllib2.urlopen(ROOT_URL + uri, body).read())
 
-print Call('/api2/channel/assets', id=KTTV, start=1556159410, stop=1556161200)
+print Call('/api/end/<point>', id=KTTV, start=1556159410, stop=1556161200)
