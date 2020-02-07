@@ -1,10 +1,10 @@
 import requests
 
 
-#devHeaders = {'x-api-key': 'DEFAULT', 'authorization': 'Bearer Token'}
-#qaHeaders = {'x-api-key': 'DEFAULT', 'authorization': 'Bearer Token'} # set you headers
-#prodHeaders = {'x-api-key': 'DEFAULT', 'authorization': 'Bearer Token'}
-base_URL = # "cms.url.somewhere.com" # Set a base url so, if later given an array you could just concatenate the ID
+#devHeaders = {'x-api-key': 'value', 'authorization': 'Bearer Token'}
+#qaHeaders = {'x-api-key': 'value', 'authorization': 'Bearer Token'} # set headers
+#prodHeaders = {'x-api-key': 'value', 'authorization': 'Bearer Token'}
+base_URL = # "cms.url.somewhere.com" # Set a base url so, if later given an array you can concatenate the ID
 
 
 
@@ -21,7 +21,7 @@ mediaSources5 = ["WFVX", "WFXB", "WFXG", "WFXL", "WFXP", "WFXR", "WFXT", "WFXV",
 mediaSources6 = ["WMSN", "WNAC", "WNTZ", "WNYF", "WOLF", "WPBI", "WPFO", "WPGH", "WPGX", "WPMT", "WQRF", "WRAZ", "WRGT", "WRLH", "WRSP", "WSBT", "WSFX", "WSMH", "WSVN", "WSYM", "WSYT", "WTAT", "WTGS", "WTHI", "WTIC"]
 mediaSources7 = ["WTNZ", "WTOV", "WTTE", "WTVC", "WTWC", "WUHF", "WUPW", "WUTV", "WVAH", "WVBT", "WVNS", "WVUE", "WWCP", "WXIN", "WXIX", "WXMI", "WXTX", "WXXA", "WXXV", "WYDC", "WYDO", "WYFX", "WYZZ", "WZDX", "WZTV"]
 
-for mediaSourceId in CPELST377: # we can loop through the array to proccess all in list
+for mediaSourceId in CPELST377: # loop through the array to proccess all in list
   response = requests.delete(base_URL+mediaSourceId, headers=<headers>) 
   print("Deleting" + " " + mediaSourceId + " " +  "as a media source from <ENV> DPP!")
   print(response) # print the response to get back HTTP status code
