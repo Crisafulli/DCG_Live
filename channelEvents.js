@@ -7,12 +7,12 @@ const endpoints = [
   {
   tagURL: 'http://34.210.83.47/api/2.0/channels/events/.json',
   Logger: new SplunkLogger({token:'replace with token', url:'replace with splunk endpoint'}),
-  interval: 1000,
+  interval: 5000,
   },
   {
   tagURL: 'http://34.210.83.47/api/2.0/channels/statistics/.json',
   Logger: new SplunkLogger({token:'replace with token', url:'replace with splunk endpoint',}),
-  interval: 1000,
+  interval: 5000,
   },
 ];
 
