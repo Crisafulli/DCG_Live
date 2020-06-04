@@ -13,21 +13,21 @@ function loopThroughJSON() {
 
 const endpoints = [
   {
-  tagURL: 'http://52.12.21.142/api/2.0/channels/events/.json',
+  tagURL: 'http://ip/some/path/.json',
   // each source inside the splunk index, has a specified token
-  Logger: new SplunkLogger({token:'6EA37CCC-3004-488F-856E-DABDFD0CBAC1', url:'https://http-inputs-fox.splunkcloud.com:443'}),
+  Logger: new SplunkLogger({token:'token', url:'splunk-url'}),
   interval: 3000,
   },
   {
-  tagURL: 'http://52.12.21.142/api/2.0/channels/statistics/.json',
-  Logger: new SplunkLogger({token:'FDD818FB-D069-441F-B5F1-EE62D9601B71', url:'https://http-inputs-fox.splunkcloud.com:443',}),
+  tagURL: 'http://ip/some/path/.json',
+  Logger: new SplunkLogger({token:'token', url:'splunk-url',}),
   interval: 3000,
   processResponse: loopThroughJSON,
   },
 
   {
-  tagURL: 'http://52.12.21.142/api/2.0/channels/statistics/audio_pids_statistics/.json',
-  Logger: new SplunkLogger({token:'84A5DBF1-D7F2-4403-9BA0-46C33B173A3C', url:'https://http-inputs-fox.splunkcloud.com:443',}),
+  tagURL: 'http://ip/some/path//.json','
+  Logger: new SplunkLogger({token:'token', url:'splunk-url',}),
   interval: 10000,
   },
   // {
